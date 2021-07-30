@@ -3,9 +3,12 @@ Operation: Plus
 """
 
 
-def generate_code(json_dict):
+def generate_code(json_dict, lang='python'):
+    result = ''
     plus_1, plus_2, output = parse_json(json_dict)
-    return "{} = {} + {}".format(output, plus_1, plus_2)
+    if lang == 'python':
+        result = "{} = {} + {}".format(output, plus_1, plus_2)
+    return result
 
 
 def parse_json(json_dict):
