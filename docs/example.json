@@ -1,0 +1,77 @@
+{
+  "class_name": "LiYuan",
+  "initiator": {
+    "parent": {
+      "parent_name": "Student",
+      "parent_type": "class"
+    },
+    "parameters": [
+      {
+        "parameter_name": "age",
+        "parameter_type": "int",
+        "parameter_default": 34
+      },
+      {
+        "parameter_name": "toefl_score",
+        "parameter_type": "int",
+        "parameter_default": 65
+      }
+    ],
+    "steps": [
+      {
+        "operator": "set_self_var",
+        "var_name": "age",
+        "type": "string",
+        "from": true,
+        "value": "age"
+      },
+      {
+        "operator": "set_self_var",
+        "var_name": "toefl_score",
+        "type": "int",
+        "from": true,
+        "value": "toefl_score"
+      }
+    ]
+  },
+  "functions": [
+    {
+      "function_name": "introduce_myself",
+      "availability": "public",
+      "parameters": [
+        {
+          "parameter_name": "audience",
+          "parameter_type": "string",
+          "parameter_default": null
+        }
+      ],
+      "return_type": "string",
+      "steps": [
+        {
+          "operator": "set_local_var",
+          "var_name": "a",
+          "type": "int",
+          "from": false,
+          "value": 0
+        },
+        {
+          "operator": {
+            "operator_name": "for",
+            "start": 1,
+            "end": 10,
+            "step": 1,
+            "do": [
+              {
+                "operator_name": "plus",
+                "output": "a",
+                "input_1": "a",
+                "input_2": 1
+              }
+            ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
